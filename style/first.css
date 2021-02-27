@@ -12,12 +12,10 @@ body {
   padding: 0;
   height: 10vh;
   width: 100vw;
-  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  z-index: 1;
   box-shadow: 1px 0 3px 1px rgba(0, 0, 0, 0.5);
 }
 .top img {
@@ -26,50 +24,34 @@ body {
   border: 1px solid black;
   border-radius: 5px;
 }
-.top img:nth-child(3) {
+.top img:nth-child(2) {
   height: 7vw;
 }
-.menu {
-  position: absolute;
-  top: 6vh;
-  left: 0.4vw;
+.select{
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 6vh;
+  display: flex;
   background-color: white;
-  border: none;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  padding: 0.5vh 0.5vw;
-}
-.left {
-  float: left;
-  margin-top: 10vh;
-  width: 6vw;
-  height: 90%;
-  max-height: 100%;
-  position: fixed;
+  justify-content: space-around;
   align-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
 }
-.left > div {
-  line-height: 4vw;
-  width: 4vw;
-  margin-top: 0.9vw;
-  margin-left: 0.4vw;
-  text-align: center;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  background-color: white;
+.select select{
+  font-size: 1.3vh;
+  padding: 0.3vW;
 }
-.left > div:hover {
-  color: green;
+.btn{
+  font-size: 1.3vw;
+  background-color: #fff;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  outline: none;
 }
 .zurnal {
-  position: absolute;
   top: 11vh;
   left: 7vw;
   width: 100%;
-  /* border: 1px solid black; */
+  margin: 1vw;
 }
 .zurnal * {
   border: 1px solid black;
@@ -91,4 +73,7 @@ body {
 }
 .head label {
   border: none;
+}
+#mug option:last-child{
+  display: none;
 }

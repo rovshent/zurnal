@@ -2,19 +2,22 @@ const sene = document.getElementsByClassName('sene');
 for(let i=0;i<30;i++){
     sene[i].textContent=i+1;
 }
-const menuBtn = document.querySelector('.menu');
-const menu = document.querySelector('.left');
-const zurnal = document.querySelector('.zurnal');
-var k=0;
-menuBtn.addEventListener('click',removeMenu);
-function removeMenu(e) {
-    if (k%2==0){
-        menu.style.display = 'none';
-        zurnal.style.left = '0.5vw';
-
-    }else{
-        menu.style.display = 'block';
-        zurnal.style.left = '7vw';
+const ders = document.querySelector('#ders');
+const mug = document.querySelector('#mug');
+const synp = document.querySelector('#synp');
+let SynpaGaras = new Promise(function(myResolve){
+    if(synp.value!='def'){
+        myResolve(synp.value);
     }
-    ++k;
+})
+SynpaGaras.then(function(val){
+    
+})
+function clear() {
+    mug.forEach(x => {
+        x.style.display = block;
+    });
+    ders.forEach(x => {
+        x.style.display = block;
+    });
 }
